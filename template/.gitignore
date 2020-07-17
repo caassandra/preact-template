@@ -1,3 +1,20 @@
-node_modules
+# Dependencies
+# https://yarnpkg.com/advanced/qa/#which-files-should-be-gitignored
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
+
+# Note: we actually want to keep node_modules for "yarn build" to work
+# https://github.com/preactjs/preact-cli/issues/1046
+node_modules/**
+!node_modules/.gitkeep
+
+# Build output
 /build
+size-plugin.json
+
+
 /*.log

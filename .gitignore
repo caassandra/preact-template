@@ -1,5 +1,4 @@
-node_modules
-.DS_Store
 *.lock
 *.log
-template/package-lock.json
+.vscode
+!template/.vscode
