@@ -31,8 +31,15 @@ export default {
     );
 
     // Let webpack work with PnP stuff
-    config.resolve.plugins = [PnpWebpackPlugin];
-    config.resolveLoader.plugins = [moduleLoader(module)];
+    config.resolve.plugins = [
+      ...(config.resolve.plugins || []),
+      PnpWebpackPlugin,
+    ];
+    config.resolveLoader.plugins = [
+      ...(config.resolveLoader.plugins || []),
+      moduleLoader(module),
+    ];
+
     /* eslint-enable no-param-reassign */
   },
 };

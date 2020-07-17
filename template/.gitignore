@@ -9,6 +9,7 @@
 
 # Note: we actually want to keep node_modules for "yarn build" to work
 # https://github.com/preactjs/preact-cli/issues/1046
+# Current workaround for this is to call mkdirp when running "yarn build"
 node_modules/**
 !node_modules/.gitkeep
 
